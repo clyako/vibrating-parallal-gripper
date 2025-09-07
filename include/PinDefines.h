@@ -1,0 +1,42 @@
+/*
+ * ENCODER PINS
+ */
+#define ENCODER_1_CHANNEL_NUM 1
+#define ENCODER_1_CHANNEL_A 31
+#define ENCODER_1_CHANNEL_B 30
+
+#define ENCODER_2_CHANNEL_NUM 2
+#define ENCODER_2_CHANNEL_A 8
+#define ENCODER_2_CHANNEL_B 7
+
+#define ENCODER_3_CHANNEL_NUM 3
+#define ENCODER_3_CHANNEL_A 4
+#define ENCODER_3_CHANNEL_B 3
+
+#define ENCODER_4_CHANNEL_NUM 4
+#define ENCODER_4_CHANNEL_A 2
+#define ENCODER_4_CHANNEL_B 1
+
+/*
+ * MOTOR PINS
+ */
+#define MOTOR_1_PWM_A 5
+#define MOTOR_1_PWM_B 6
+#define MOTOR_1_SLP 9
+
+#define MOTOR_2_PWM_A 25
+#define MOTOR_2_PWM_B 24
+#define MOTOR_2_SLP 26
+
+#define MOTOR_3_PWM_A 22
+#define MOTOR_3_PWM_B 23
+#define MOTOR_3_SLP 21
+
+#define MOTOR_4_PWM_A 33
+#define MOTOR_4_PWM_B 37
+#define MOTOR_4_SLP 38
+
+#define MOTOR_5_PWM_A 28
+#define MOTOR_5_PWM_B 29
+#define MOTOR_5_SLP 32
+#define CURRENT_SENSOR 27
