@@ -34,18 +34,17 @@ float ForceMotor::read_current()
 void ForceMotor::movement_test(int movement_speed)
 {
     int32_t current_time = millis();
-    while (millis() - current_time < 2000)
+    while (millis() - current_time < 130)
     {
         drive_motor(1, movement_speed);
-        Serial.println(read_current());
     }
+    delay(1000);
 
     current_time = millis();
 
-    while (millis() - current_time < 2000)
+    while (millis() - current_time < 100)
     {
         drive_motor(0, movement_speed);
-        Serial.println(read_current());
     }
-    delay(2000);
+    delay(1000);
 }

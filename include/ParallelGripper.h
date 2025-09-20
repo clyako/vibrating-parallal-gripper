@@ -71,7 +71,7 @@ private:
     unsigned long _control_loop_period = (int)(1e6 / ((float)CONTROL_LOOP_FREQUENCY)); // 25 µs (40 kHz)
 
     // values for plotting
-    unsigned long _plot_period = 1000; // 1 ms
+    unsigned long _plot_period = 500; // 1 ms
     elapsedMicros _plot_timer;
 
     // toggling digital pin for control loop frequency verification for verifying control loop speed

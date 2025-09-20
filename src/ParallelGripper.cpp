@@ -187,8 +187,6 @@ void ParallelGripper::drive_motors(float _motor_1_left_target_position, float _m
     _right_finger.motor_2.compute_control_signal(_motor_2_right_direction, _motor_2_right_pwm, _motor_2_right_target_position, _motor_2_right_current_position);
     _right_finger.motor_2.drive_motor(_motor_2_right_direction, _motor_2_right_pwm);
 
-    // want to drive the four motors at the same time, that's why the control signals are both computed first
-
     if (plotting && _plot_timer > _plot_period) // add printing period here as well
     {
         _plot_timer = 0;

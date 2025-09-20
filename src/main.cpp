@@ -7,9 +7,9 @@ void log_object_position_and_force_data();
 
 // #define ENCODER_TEST
 // #define INPUT_TEST
-// #define FORCE_MOTOR_MOVEMENT_TEST
+#define FORCE_MOTOR_MOVEMENT_TEST
 // #define FORCE_MOTOR_CALIBRATION
-#define PLOT
+// #define PLOT
 // #define LOG
 uint8_t APPLY_FORCE = 0;
 uint8_t NO_FORCE = 1;
@@ -20,8 +20,8 @@ int force_increment = 100;
 int max_force = 1600;
 
 ParallelGripper gripper = ParallelGripper();
-int translation_grip_force = 1000;
-int rotation_grip_force = 1200;
+int translation_grip_force = 0;
+int rotation_grip_force = 0;
 
 // stuff for logging data
 elapsedMicros logging_timer;
@@ -54,9 +54,9 @@ void loop()
 #elif defined(FORCE_MOTOR_MOVEMENT_TEST)
   if (gripper.power_switch())
   {
-    gripper.force_motor.drive_motor(0, 100);
-    gripper.force_motor.read_current();
-    // gripper.force_motor.movement_test();
+    // gripper.force_motor.drive_motor(0, 100);
+    // gripper.force_motor.read_current();
+    gripper.force_motor.movement_test(600);
   }
 #elif defined(FORCE_MOTOR_CALIBRATION)
   if (STATE == NO_FORCE)
